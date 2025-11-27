@@ -30,3 +30,6 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+nocat
+nocat_darwin_amd64
+nocat_darwin_arm64
