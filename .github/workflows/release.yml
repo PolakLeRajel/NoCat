@@ -27,18 +27,16 @@ jobs:
       - name: Build binaries
         run: ./build.sh
 
-      - name: List build outputs
-        run: ls -l
+      - name: Rename artifacts for release
+        run: |
+          cp nocat_windows_amd64.exe nocat.exe
+          cp nocat_linux_amd64 nocat
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            nocat_windows_amd64.exe
-            nocat_windows_arm64.exe
-            nocat_darwin_amd64
-            nocat_darwin_arm64
-            nocat_linux_amd64
-            nocat_linux_arm64
+            nocat.exe
+            nocat
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
