@@ -104,11 +104,6 @@ reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run ^
   /f
 ```
 
-## Name
-
-Project name: **NoCat**  
-A harmless Netcat-style simulator for safe detection testing.
-
 ## License
 
 MIT (recommended).
